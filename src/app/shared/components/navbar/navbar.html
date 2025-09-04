@@ -1,0 +1,22 @@
+<mat-toolbar color="primary" class="navbar">
+  <!-- Logo / Home link -->
+  <a mat-button routerLink="/" class="logo">E-Shop</a>
+
+  <span class="spacer"></span>
+
+  <!-- Wishlist -->
+  <div class="nav_actions">
+    <a mat-icon-button routerLink="/wishlist" matBadge="{{ wishlistCount() }}" matBadgeColor="warn">
+      <mat-icon>favorite</mat-icon>
+    </a>
+
+    <!-- Cart -->
+    <a mat-icon-button routerLink="/cart" matBadge="{{ cartCount() }}" matBadgeColor="accent">
+      <mat-icon>shopping_cart</mat-icon>
+    </a>
+
+    <button mat-icon-button (click)="toggleTheme.emit()" matTooltip="Toggle Theme">
+      <mat-icon>dark_mode</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>

@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@use 'styles/mixins' as *;
+@use 'styles/theme' as *;
+
+html {
+  @include mat.theme(
+    (
+      color: (
+        primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette,
+      ),
+      typography: Roboto,
+      density: 0,
+    )
+  );
+}
+
+body {
+  color-scheme: auto;
+
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  // Reset the user agent margin.
+  margin: 0;
+}

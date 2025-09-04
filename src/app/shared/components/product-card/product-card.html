@@ -1,0 +1,23 @@
+<div class="product-card">
+  <img [src]="image" [alt]="title" class="product-image" />
+  <h3>{{ title }}</h3>
+  <p>{{ price | currency }}</p>
+
+  <div class="actions">
+    <!-- Add to Cart -->
+    <button mat-raised-button class="add-to-cart" color="primary" (click)="addToCart.emit()">
+      Add to Cart
+    </button>
+
+    <!-- Wishlist Toggle -->
+    <button mat-icon-button color="warn" (click)="toggleWishlist.emit()" class="wishlist-toggle">
+      @if (inWishlist()) {
+      <mat-icon>favorite</mat-icon>
+      <!-- Filled heart -->
+      } @else {
+      <mat-icon>favorite_border</mat-icon>
+      <!-- Outlined heart -->
+      }
+    </button>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+@use 'theme' as *;
+
+$breakpoints: (
+  mobile: 480px,
+  tablet: 768px,
+  desktop: 1200px,
+);
+
+@mixin respond-to($device) {
+  @if map-has-key($breakpoints, $device) {
+    @media (max-width: map-get($breakpoints, $device)) {
+      @content;
+    }
+  }
+}
+
+// ✅ Card shadow & hover
+@mixin card-style {
+  background: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+}

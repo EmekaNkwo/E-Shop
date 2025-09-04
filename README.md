@@ -1,59 +1,143 @@
-# EcommerceApp
+# E-Shop - Modern E-commerce Application
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.1.
+[![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)](https://angular.io/)
+[![NgRx](https://img.shields.io/badge/ngrx-764ABC?style=for-the-badge&logo=ngrx&logoColor=white)](https://ngrx.io/)
+[![Angular Material](https://img.shields.io/badge/Angular_Material-1976D2?style=for-the-badge&logo=angular&logoColor=white)](https://material.angular.io/)
 
-## Development server
+A modern, responsive e-commerce application built with Angular, NgRx for state management, and Angular Material for UI components. This application showcases best practices in Angular development including lazy loading, reactive state management, and modular architecture.
 
-To start a local development server, run:
+![Screenshot](docs/images/home.png)
 
-```bash
-ng serve
+## Features
+
+- **Product Catalog**
+
+  - Browse products by categories
+  - Product details with images and descriptions
+  - Product search functionality
+
+- **Shopping Cart**
+
+  - Add/remove products
+  - Update quantities
+  - View cart summary
+  - Proceed to checkout
+
+- **Wishlist**
+
+  - Save favorite products
+  - Move items to cart
+
+- **Theming**
+
+  - Light/Dark mode toggle
+  - Responsive design for all devices
+
+- **Performance**
+  - Lazy-loaded feature modules
+  - Optimized bundle size
+  - Efficient change detection
+
+## Technologies Used
+
+- **Frontend Framework**: Angular 20+
+- **State Management**: NgRx (Store, Effects, Entity)
+- **UI Components**: Angular Material
+- **Styling**: SCSS with CSS Variables for theming
+- **Build Tool**: Angular CLI
+- **Package Manager**: npm
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or later)
+- npm (v9 or later) or yarn
+- Angular CLI (v20 or later)
+
+### Installation
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/yourusername/ecommerce-app.git
+   cd ecommerce-app
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Start the development server**
+   ```bash
+   ng serve
+   ```
+   The application will be available at `http://localhost:4200/`
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── core/               # Core module (singleton services, auth, interceptors)
+│   ├── features/           # Feature modules (products, cart, etc.)
+│   │   ├── cart/           # Shopping cart functionality
+│   │   ├── products/       # Product listing and details
+│   │   └── wishlist/       # Wishlist functionality
+│   ├── shared/             # Shared components, directives, pipes
+│   └── app.component.*     # Root component
+├── assets/                 # Static assets
+├── environments/           # Environment configurations
+└── styles/                 # Global styles and theming
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Running Tests
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Run unit tests:
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+Run end-to-end tests:
 
 ```bash
 ng e2e
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Build
 
-## Additional Resources
+Build the project:
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```bash
+ng build
+```
+
+The build artifacts will be stored in the `dist/` directory.
+
+## Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- [Angular](https://angular.io/) - The web framework used
+- [NgRx](https://ngrx.io/) - State management
+- [Angular Material](https://material.angular.io/) - UI components
+- [Unsplash](https://unsplash.com/) - For the beautiful product images
+
+---

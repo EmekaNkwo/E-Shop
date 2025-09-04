@@ -1,0 +1,55 @@
+<div class="wishlist-container">
+  <h2>Your Wishlist</h2>
+
+  @if (items().length > 0) {
+  <mat-list role="list" class="wishlist-items">
+    @for (item of items(); track item.id) {
+    <mat-list-item role="listitem" class="wishlist-item">
+      <mat-card class="wishlist-card">
+        <mat-card-header>
+          <mat-card-title>{{ item.title }}</mat-card-title>
+          <mat-card-subtitle>{{
+            item.price | currency : 'USD' : 'symbol' : '1.2-2'
+          }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions class="wishlist-actions">
+          <button
+            mat-stroked-button
+            color="primary"
+            (click)="moveToCart(item)"
+            aria-label="Move to cart"
+          >
+            <mat-icon>shopping_cart</mat-icon>
+            Move to Cart
+          </button>
+          <button
+            mat-icon-button
+            color="warn"
+            (click)="remove(item.id)"
+            aria-label="Remove from wishlist"
+          >
+            <mat-icon>delete</mat-icon>
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-list-item>
+    }
+  </mat-list>
+
+  <button
+    mat-stroked-button
+    color="warn"
+    (click)="clear()"
+    class="clear-all-btn"
+    aria-label="Clear wishlist"
+  >
+    <mat-icon>delete_forever</mat-icon>
+    Clear Wishlist
+  </button>
+  } @else {
+  <p class="empty-state">
+    <mat-icon class="empty-icon">favorite_border</mat-icon>
+    Your wishlist is empty. Start adding some products!
+  </p>
+  }
+</div>
