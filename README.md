@@ -60,8 +60,8 @@ A modern, responsive e-commerce application built with Angular, NgRx for state m
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/yourusername/ecommerce-app.git
-   cd ecommerce-app
+   git clone https://github.com/EmekaNkwo/E-Shop.git
+   cd E-Shop
    ```
 
 2. **Install dependencies**
