@@ -6,6 +6,9 @@
 
 A modern, responsive e-commerce application built with Angular, NgRx for state management, and Angular Material for UI components. This application showcases best practices in Angular development including lazy loading, reactive state management, and modular architecture.
 
+## Live Demo
+https://e-shop-angular.netlify.app/
+
 ![Screenshot](docs/images/home.png)
 
 ## Features
